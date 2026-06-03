@@ -1,0 +1,145 @@
+[
+  {
+    "id": "hero-consultation",
+    "name": "Hero — lawyer consulting a client",
+    "category": "hero",
+    "width": 1376,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/hero/hero-consultation-2a2cebe2.webp",
+    "local_path": null,
+    "alt": "Hero — lawyer consulting a client - luatsutuvan.net",
+    "description": "Photorealistic wide shot of a professional Vietnamese lawyer in a dark suit attentively consulting a client across a modern desk in a bright contemporary law of"
+  },
+  {
+    "id": "hero-phone-consult",
+    "name": "Hero alt — phone consultation",
+    "category": "hero",
+    "width": 1376,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/hero/hero-phone-consult-ebe64ca6.webp",
+    "local_path": null,
+    "alt": "Hero alt — phone consultation - luatsutuvan.net",
+    "description": "Photorealistic image of a Vietnamese lawyer at a tidy modern desk speaking warmly on a smartphone while taking notes, bright professional office, soft daylight,"
+  },
+  {
+    "id": "section-document-review",
+    "name": "Document review close-up",
+    "category": "content",
+    "width": 1200,
+    "aspect": "3:2",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/content/section-document-review-7230fd7c.webp",
+    "local_path": null,
+    "alt": "Document review close-up - luatsutuvan.net",
+    "description": "Photorealistic close-up of hands reviewing and annotating a legal contract with a pen, reading glasses and laptop softly blurred behind, warm professional light"
+  },
+  {
+    "id": "section-office-meeting",
+    "name": "Law office team meeting",
+    "category": "content",
+    "width": 1600,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/content/section-office-meeting-47b64d2b.webp",
+    "local_path": null,
+    "alt": "Law office team meeting - luatsutuvan.net",
+    "description": "Photorealistic image of a small team of Vietnamese legal professionals discussing a case around a meeting table in a modern HCMC law office, glass walls, natura"
+  },
+  {
+    "id": "practice-dat-dai",
+    "name": "Practice — land & real estate",
+    "category": "content",
+    "width": 1200,
+    "aspect": "3:2",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/content/practice-dat-dai-1fbb2b75.webp",
+    "local_path": null,
+    "alt": "Practice — land & real estate - luatsutuvan.net",
+    "description": "Photorealistic image representing Vietnamese land and real-estate law: a land-use rights certificate (sổ đỏ) and a property blueprint on a desk beside a small a"
+  },
+  {
+    "id": "practice-thua-ke",
+    "name": "Practice — inheritance",
+    "category": "content",
+    "width": 1200,
+    "aspect": "3:2",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/content/practice-thua-ke-55c26d13.webp",
+    "local_path": null,
+    "alt": "Practice — inheritance - luatsutuvan.net",
+    "description": "Photorealistic image representing inheritance law: a last will and testament document with a fountain pen and a small set of house keys on a warm wooden desk, s"
+  },
+  {
+    "id": "blog-divorce",
+    "name": "Blog hero — family / divorce",
+    "category": "blog",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/blog/blog-divorce-e3668ce8.webp",
+    "local_path": null,
+    "alt": "Blog hero — family / divorce - luatsutuvan.net",
+    "description": "Photorealistic, sensitive editorial image representing family-law consultation in Vietnam: two wedding rings resting on a legal document beside a cup of tea, so"
+  },
+  {
+    "id": "blog-labor",
+    "name": "Blog hero — labor / employment",
+    "category": "blog",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/blog/blog-labor-a5eb3b57.webp",
+    "local_path": null,
+    "alt": "Blog hero — labor / employment - luatsutuvan.net",
+    "description": "Photorealistic editorial image representing labor law: an employment contract and an employee handbook on a desk in a bright office, a hard hat softly blurred i"
+  },
+  {
+    "id": "blog-business",
+    "name": "Blog hero — business / enterprise",
+    "category": "blog",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/blog/blog-business-b6ad7fd0.webp",
+    "local_path": null,
+    "alt": "Blog hero — business / enterprise - luatsutuvan.net",
+    "description": "Photorealistic editorial image representing business law in Vietnam: a business registration certificate, a fountain pen and a laptop on a sleek desk in a moder"
+  },
+  {
+    "id": "blog-criminal",
+    "name": "Blog hero — criminal defense",
+    "category": "blog",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/blog/blog-criminal-8b6cdc26.webp",
+    "local_path": null,
+    "alt": "Blog hero — criminal defense - luatsutuvan.net",
+    "description": "Photorealistic, restrained editorial image representing criminal defense: the columns and steps of a dignified Vietnamese courthouse exterior in soft morning li"
+  },
+  {
+    "id": "blog-contract",
+    "name": "Blog hero — contracts",
+    "category": "blog",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/blog/blog-contract-825feb5c.webp",
+    "local_path": null,
+    "alt": "Blog hero — contracts - luatsutuvan.net",
+    "description": "Photorealistic editorial close-up of two parties about to sign a business contract, pens poised over the signature page, hands only, modern boardroom softly blu"
+  },
+  {
+    "id": "blog-civil-debt",
+    "name": "Blog hero — civil / debt recovery",
+    "category": "blog",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/blog/blog-civil-debt-843941c2.webp",
+    "local_path": null,
+    "alt": "Blog hero — civil / debt recovery - luatsutuvan.net",
+    "description": "Photorealistic editorial image representing civil disputes and debt recovery: a promissory note / loan agreement, a calculator and a pen on a desk, soft dayligh"
+  },
+  {
+    "id": "blog-consult-online",
+    "name": "Blog hero — online legal consultation",
+    "category": "blog",
+    "width": 1200,
+    "aspect": "16:9",
+    "cdn_url": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/luatsutuvan.net/blog/blog-consult-online-88885769.webp",
+    "local_path": null,
+    "alt": "Blog hero — online legal consultation - luatsutuvan.net",
+    "description": "Photorealistic editorial image of a person at home using a laptop and smartphone to consult a lawyer online, warm cozy lighting, a notepad nearby, sense of acce"
+  }
+]

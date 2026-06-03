@@ -1,0 +1,373 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* ============================================================================
+   luatsutuvan.net — "Legal Urgent Care" design system
+   Bespoke conversion-site visual language. Palette + type scale per PRD §2.
+   Tailwind v4 @theme tokens → utilities like bg-trust, text-navy, font-heading.
+   ========================================================================== */
+
+@theme {
+  /* ---- Palette (PRD §2 Color Palette) ------------------------------------ */
+  --color-trust: #0d9f6e; /* primary action — Trust Green */
+  --color-trust-600: #0b8a60;
+  --color-trust-700: #097552;
+  --color-trust-50: #e7f7f1;
+  --color-confidence: #1e6bb8; /* secondary action — Confidence Blue */
+  --color-confidence-700: #185a9c;
+  --color-confidence-50: #e8f1fa;
+  --color-urgency: #e8792b; /* Bright Orange — urgency accents */
+  --color-urgency-50: #fdf0e6;
+  --color-navy: #1a2332; /* Deep Navy — headlines & body */
+  --color-navy-800: #232f42;
+  --color-steel: #64748b; /* Steel Gray — secondary text */
+  --color-surface: #f8fafb; /* Cool Gray — cards & form areas */
+  --color-gold: #d4a843; /* Trust Gold — ratings & premium */
+  --color-danger: #dc3545; /* Safe Red — form errors only */
+
+  /* ---- Typography: Be Vietnam Pro -----------------------------------------
+     FLUID scale — every step uses clamp() so type scales smoothly from mobile
+     to ultra-wide. The previous fixed modular scale (1.333) rendered text-3xl
+     at 57px on phones with no responsive easing, which made layouts feel
+     oversized and "all over the place". These values are the single biggest
+     lever on the premium/authority read of the whole site. -------------------*/
+  --font-heading: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
+
+  --text-xs: 0.75rem; /* 12px — micro labels */
+  --text-sm: 0.875rem; /* 14px — captions, meta */
+  --text-base: 1.0625rem; /* 17px — body */
+  --text-lg: clamp(1.125rem, 1.06rem + 0.32vw, 1.25rem); /* 18→20 — lead text, card titles */
+  --text-xl: clamp(1.35rem, 1.18rem + 0.8vw, 1.6rem); /* 22→26 — sub-headers */
+  --text-2xl: clamp(1.7rem, 1.42rem + 1.4vw, 2.25rem); /* 27→36 — section titles (sm) */
+  --text-3xl: clamp(2.05rem, 1.6rem + 2.2vw, 3rem); /* 33→48 — section titles */
+  --text-4xl: clamp(2.5rem, 1.9rem + 3vw, 3.75rem); /* 40→60 — hero / display */
+
+  /* ---- Depth — layered "clinic" shadows (not flat default) --------------- */
+  --shadow-card: 0 1px 2px rgba(26, 35, 50, 0.04), 0 8px 24px -8px rgba(26, 35, 50, 0.12);
+  --shadow-lift: 0 2px 4px rgba(26, 35, 50, 0.05), 0 18px 48px -12px rgba(26, 35, 50, 0.22);
+  --shadow-form: 0 4px 8px rgba(26, 35, 50, 0.06), 0 32px 64px -24px rgba(13, 159, 110, 0.28);
+  --shadow-trust: 0 8px 24px -8px rgba(13, 159, 110, 0.4);
+
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+
+  /* ---- Motion keyframes (consumed by animation components) --------------- */
+  --animate-ring-pulse: ring-pulse 8s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.4s linear infinite;
+}
+
+/* ---- Base layer --------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background: #ffffff;
+    color: var(--color-navy);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.7;
+    /* faint legal-scales texture wash so backgrounds aren't dead-flat white.
+       NB: no background-attachment:fixed — it causes paint jank on mobile. */
+    background-image:
+      radial-gradient(circle at 12% -10%, rgba(13, 159, 110, 0.05), transparent 38%),
+      radial-gradient(circle at 88% 4%, rgba(30, 107, 184, 0.045), transparent 40%);
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.018em;
+    color: var(--color-navy);
+    text-wrap: balance;
+  }
+  /* Larger display type gets tighter tracking + heavier weight — the premium
+     "law firm" read comes from this restraint, not from bolding everything. */
+  h1 { font-weight: 800; letter-spacing: -0.028em; line-height: 1.06; }
+  h2 { letter-spacing: -0.022em; }
+  ::selection {
+    background: var(--color-trust);
+    color: #fff;
+  }
+  /* Accessible focus ring on every interactive control */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  textarea:focus-visible, select:focus-visible {
+    outline: 3px solid var(--color-confidence);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+/* ---- Component primitives ------------------------------------------------ */
+@layer components {
+  /* Section width container */
+  .container-x {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-x { padding-inline: 2rem; }
+  }
+  /* Narrow reading measure for article bodies + dense copy. */
+  .container-narrow {
+    width: 100%;
+    max-width: 46rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  /* Wide container for full-bleed feature sections. */
+  .container-wide {
+    width: 100%;
+    max-width: 88rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-narrow { padding-inline: 2rem; }
+    .container-wide { padding-inline: 2rem; }
+  }
+
+  /* ---- Vertical rhythm ----------------------------------------------------
+     One fluid section padding everywhere kills the arbitrary py-16/py-20 mix.
+     `.section` = standard; `.section-lg` = hero-adjacent breathing room. ------*/
+  .section { padding-block: clamp(3.25rem, 2.4rem + 3.4vw, 6rem); }
+  .section-lg { padding-block: clamp(4rem, 3rem + 4vw, 7.5rem); }
+  /* Consistent gap between a SectionHeading and the block it introduces. */
+  .section-head-gap { margin-top: clamp(2rem, 1.4rem + 2vw, 3.25rem); }
+
+  /* --- Buttons --- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1.0625rem;
+    line-height: 1;
+    padding: 1rem 1.6rem;
+    border-radius: 9999px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--color-trust);
+    color: #fff;
+    box-shadow: var(--shadow-trust);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .btn-primary:hover { background: var(--color-trust-600); transform: translateY(-2px); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary {
+    background: var(--color-confidence);
+    color: #fff;
+    box-shadow: 0 8px 24px -8px rgba(30, 107, 184, 0.45);
+  }
+  .btn-secondary:hover { background: var(--color-confidence-700); transform: translateY(-2px); }
+  .btn-ghost {
+    background: #fff;
+    color: var(--color-navy);
+    border: 1.5px solid rgba(26, 35, 50, 0.12);
+  }
+  .btn-ghost:hover { border-color: var(--color-trust); color: var(--color-trust-700); }
+  .btn-call {
+    background: var(--color-trust);
+    color: #fff;
+  }
+  .btn-call:hover { background: var(--color-trust-600); }
+
+  /* --- Cards --- */
+  .card {
+    background: #fff;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(26, 35, 50, 0.05);
+  }
+  .card-lift {
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+  }
+  .card-lift:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); }
+
+  /* --- Form fields (single-column, clinic-style) --- */
+  .field {
+    width: 100%;
+    background: #fff;
+    border: 1.5px solid rgba(26, 35, 50, 0.14);
+    border-radius: 0.85rem;
+    padding: 0.95rem 1.1rem;
+    font-size: 1.0625rem;
+    color: var(--color-navy);
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+  .field::placeholder { color: #94a3b8; }
+  .field:focus {
+    border-color: var(--color-trust);
+    box-shadow: 0 0 0 4px rgba(13, 159, 110, 0.12);
+    outline: none;
+  }
+  /* micro-interaction: valid input glows green (PRD §2 Motion) */
+  .field.is-valid {
+    border-color: var(--color-trust);
+    box-shadow: 0 0 0 4px rgba(13, 159, 110, 0.1);
+  }
+  .field.is-error {
+    border-color: var(--color-danger);
+    box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.1);
+  }
+  .field-label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: 0.4rem;
+  }
+
+  /* --- Trust pills / badges --- */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.4rem 0.85rem;
+    border-radius: 9999px;
+  }
+  .pill-trust { background: var(--color-trust-50); color: var(--color-trust-700); }
+  .pill-confidence { background: var(--color-confidence-50); color: var(--color-confidence-700); }
+  .pill-urgency { background: var(--color-urgency-50); color: var(--color-urgency); }
+
+  /* --- "Lawyer online" live dot --- */
+  .live-dot {
+    position: relative;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 9999px;
+    background: var(--color-trust);
+  }
+  .live-dot::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: var(--color-trust);
+    animation: live-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  /* --- Phone CTA ring-pulse (PRD §2: every 8s) --- */
+  .ring-pulse { animation: var(--animate-ring-pulse); }
+
+  /* --- Eyebrow label --- */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-trust-700);
+  }
+  .eyebrow::before {
+    content: '';
+    width: 1.75rem;
+    height: 2px;
+    background: var(--color-urgency);
+    border-radius: 2px;
+  }
+}
+
+/* ---- Keyframes ---------------------------------------------------------- */
+@keyframes ring-pulse {
+  0%, 88%, 100% { box-shadow: var(--shadow-trust); transform: scale(1); }
+  90% { box-shadow: 0 0 0 0 rgba(13, 159, 110, 0.5); transform: scale(1.04); }
+  94% { box-shadow: 0 0 0 14px rgba(13, 159, 110, 0); transform: scale(1); }
+}
+@keyframes live-ping {
+  75%, 100% { transform: scale(2.4); opacity: 0; }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+/* GradientOrbs drift (required by shared component) */
+@keyframes orb-drift-1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-30px, 40px); }
+}
+@keyframes orb-drift-2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(40px, -30px); }
+}
+@keyframes orb-drift-3 {
+  0%, 100% { transform: translate(-50%, -50%); }
+  50% { transform: translate(calc(-50% + 30px), calc(-50% - 20px)); }
+}
+@keyframes float-in {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.float-in { animation: float-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* shimmer sweep used on trust badges scroll-into-view */
+.shimmer-text {
+  background: linear-gradient(90deg, currentColor 0%, currentColor 40%, #fff 50%, currentColor 60%, currentColor 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* prose tuning for content pages — calm, readable legal long-form */
+.prose {
+  color: #334155;
+  font-size: 1.075rem;
+  line-height: 1.8;
+}
+.prose :where(h2):not(:where([class~='not-prose'] *)) {
+  font-size: var(--text-2xl);
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 6rem;
+}
+.prose :where(h3):not(:where([class~='not-prose'] *)) {
+  font-size: var(--text-xl);
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  scroll-margin-top: 6rem;
+}
+.prose :where(p, ul, ol):not(:where([class~='not-prose'] *)) {
+  margin-block: 1.05rem;
+}
+.prose :where(strong):not(:where([class~='not-prose'] *)) { color: var(--color-navy); }
+.prose :where(a):not(:where([class~='not-prose'] *)) {
+  color: var(--color-confidence);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.prose :where(a):not(:where([class~='not-prose'] *)):hover { color: var(--color-confidence-700); }
+/* Statute / quote callouts inside articles. */
+.prose :where(blockquote):not(:where([class~='not-prose'] *)) {
+  border-left: 3px solid var(--color-trust);
+  background: var(--color-trust-50);
+  margin-block: 1.5rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+  font-style: normal;
+  color: var(--color-navy);
+}

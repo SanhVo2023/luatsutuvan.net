@@ -1,0 +1,137 @@
+{
+  "site": "luatsutuvan.net",
+  "notes": "Realistic, premium Vietnamese legal imagery for the intake hub. Reuse-first against the shared R2 pool; generate only the gaps. Warm, trustworthy, professional — real people/offices, NOT abstract gold-on-black. No faces that imply specific named lawyers; no logos. Style is consistent: natural daylight, modern HCMC law-office tones, navy/green accents.",
+  "style": "Photorealistic editorial photography, soft natural light, shallow depth of field, modern professional Vietnamese law office, calm and trustworthy, muted navy/teal/warm-neutral palette",
+  "images": [
+    {
+      "id": "hero-consultation",
+      "name": "Hero — lawyer consulting a client",
+      "type": "text-to-image",
+      "prompt": "Photorealistic wide shot of a professional Vietnamese lawyer in a dark suit attentively consulting a client across a modern desk in a bright contemporary law office, warm natural daylight from large windows, legal documents and a laptop on the desk, calm reassuring atmosphere, shallow depth of field, editorial photography",
+      "category": "hero",
+      "aspect": "16:9",
+      "width": 1920,
+      "priority": "high"
+    },
+    {
+      "id": "hero-phone-consult",
+      "name": "Hero alt — phone consultation",
+      "type": "text-to-image",
+      "prompt": "Photorealistic image of a Vietnamese lawyer at a tidy modern desk speaking warmly on a smartphone while taking notes, bright professional office, soft daylight, sense of immediate helpful response, editorial style, shallow depth of field",
+      "category": "hero",
+      "aspect": "16:9",
+      "width": 1600,
+      "priority": "medium"
+    },
+    {
+      "id": "section-document-review",
+      "name": "Document review close-up",
+      "type": "text-to-image",
+      "prompt": "Photorealistic close-up of hands reviewing and annotating a legal contract with a pen, reading glasses and laptop softly blurred behind, warm professional lighting, no faces, clean modern desk, editorial photography",
+      "category": "content",
+      "aspect": "3:2",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "section-office-meeting",
+      "name": "Law office team meeting",
+      "type": "text-to-image",
+      "prompt": "Photorealistic image of a small team of Vietnamese legal professionals discussing a case around a meeting table in a modern HCMC law office, glass walls, natural light, collaborative and confident mood, editorial photography, shallow depth of field",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1600,
+      "priority": "low"
+    },
+    {
+      "id": "practice-dat-dai",
+      "name": "Practice — land & real estate",
+      "type": "text-to-image",
+      "prompt": "Photorealistic image representing Vietnamese land and real-estate law: a land-use rights certificate (sổ đỏ) and a property blueprint on a desk beside a small architectural model of houses, warm daylight, no people, professional and clean, editorial photography",
+      "category": "content",
+      "aspect": "3:2",
+      "width": 1200,
+      "priority": "high"
+    },
+    {
+      "id": "practice-thua-ke",
+      "name": "Practice — inheritance",
+      "type": "text-to-image",
+      "prompt": "Photorealistic image representing inheritance law: a last will and testament document with a fountain pen and a small set of house keys on a warm wooden desk, soft daylight, dignified and calm, no people, editorial photography",
+      "category": "content",
+      "aspect": "3:2",
+      "width": 1200,
+      "priority": "high"
+    },
+    {
+      "id": "blog-divorce",
+      "name": "Blog hero — family / divorce",
+      "type": "text-to-image",
+      "prompt": "Photorealistic, sensitive editorial image representing family-law consultation in Vietnam: two wedding rings resting on a legal document beside a cup of tea, soft warm light, calm and respectful tone, no faces, shallow depth of field",
+      "category": "blog",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "blog-labor",
+      "name": "Blog hero — labor / employment",
+      "type": "text-to-image",
+      "prompt": "Photorealistic editorial image representing labor law: an employment contract and an employee handbook on a desk in a bright office, a hard hat softly blurred in the background, natural light, no faces, professional tone",
+      "category": "blog",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "blog-business",
+      "name": "Blog hero — business / enterprise",
+      "type": "text-to-image",
+      "prompt": "Photorealistic editorial image representing business law in Vietnam: a business registration certificate, a fountain pen and a laptop on a sleek desk in a modern HCMC office tower with the city skyline softly blurred through the window, daylight, no people",
+      "category": "blog",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "blog-criminal",
+      "name": "Blog hero — criminal defense",
+      "type": "text-to-image",
+      "prompt": "Photorealistic, restrained editorial image representing criminal defense: the columns and steps of a dignified Vietnamese courthouse exterior in soft morning light, low angle, serious and respectful tone, no people, no flags",
+      "category": "blog",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "blog-contract",
+      "name": "Blog hero — contracts",
+      "type": "text-to-image",
+      "prompt": "Photorealistic editorial close-up of two parties about to sign a business contract, pens poised over the signature page, hands only, modern boardroom softly blurred, warm professional light, trustworthy tone",
+      "category": "blog",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "medium"
+    },
+    {
+      "id": "blog-civil-debt",
+      "name": "Blog hero — civil / debt recovery",
+      "type": "text-to-image",
+      "prompt": "Photorealistic editorial image representing civil disputes and debt recovery: a promissory note / loan agreement, a calculator and a pen on a desk, soft daylight, serious but calm, no faces",
+      "category": "blog",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "low"
+    },
+    {
+      "id": "blog-consult-online",
+      "name": "Blog hero — online legal consultation",
+      "type": "text-to-image",
+      "prompt": "Photorealistic editorial image of a person at home using a laptop and smartphone to consult a lawyer online, warm cozy lighting, a notepad nearby, sense of accessible trustworthy help, shallow depth of field, no readable screen text",
+      "category": "blog",
+      "aspect": "16:9",
+      "width": 1200,
+      "priority": "low"
+    }
+  ]
+}
