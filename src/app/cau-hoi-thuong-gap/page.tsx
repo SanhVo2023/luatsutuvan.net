@@ -44,6 +44,7 @@ export default function FaqPage() {
 
       <section className="container-x py-10 sm:py-14">
         <SectionHeading
+          as="h1"
           eyebrow="Câu hỏi thường gặp"
           title="Giải đáp mọi thắc mắc trước khi tư vấn"
           lead="Tổng hợp những câu hỏi khách hàng quan tâm nhất. Không thấy câu trả lời? Gửi câu hỏi ngay — miễn phí."
@@ -59,7 +60,7 @@ export default function FaqPage() {
           </div>
 
           <aside className="space-y-6 lg:sticky lg:top-28 lg:self-start">
-            <QuickForm heading="Gửi câu hỏi của bạn" />
+            <QuickForm stacked heading="Gửi câu hỏi của bạn" />
             <ScrollReveal>
               <div className="card p-6">
                 <h3 className="mb-3 font-extrabold text-navy">Tư vấn theo lĩnh vực</h3>

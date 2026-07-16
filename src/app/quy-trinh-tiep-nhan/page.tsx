@@ -58,6 +58,7 @@ export default function QuyTrinhPage() {
 
       <section className="container-x py-10 sm:py-14">
         <SectionHeading
+          as="h1"
           eyebrow="Quy trình tiếp nhận"
           title="Cách chúng tôi tiếp nhận và xử lý vụ việc của bạn"
           lead="Một quy trình rõ ràng như phòng cấp cứu pháp lý — tiếp nhận nhanh, phân loại đúng, hành động ngay."
@@ -99,7 +100,7 @@ export default function QuyTrinhPage() {
             </div>
           </div>
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <QuickForm heading="Bắt đầu ngay — gửi câu hỏi cho luật sư" />
+            <QuickForm stacked heading="Bắt đầu ngay — gửi câu hỏi cho luật sư" />
           </div>
         </div>
       </section>

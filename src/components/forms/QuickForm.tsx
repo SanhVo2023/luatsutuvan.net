@@ -10,13 +10,20 @@ import { GUARANTEES } from '@/config/site'
  * Quick inline 3-field form (PRD §10 Quick Form) — embedded in content sections
  * and SEO pages. Name | Phone | Short question | Submit. Row on desktop, stacked
  * on mobile.
+ *
+ * `stacked` — always stack the fields vertically. REQUIRED when the form sits in
+ * a narrow container (sticky sidebars, split columns): the one-row
+ * md:grid-cols-[1fr_1fr_1.4fr_auto] layout otherwise collapses each input to
+ * ~45px inside a ~300px aside, clipping placeholders to a single letter.
  */
 export default function QuickForm({
   practiceArea,
   heading = 'Gửi câu hỏi nhanh — luật sư phản hồi trong 30 phút',
+  stacked = false,
 }: {
   practiceArea?: string
   heading?: string
+  stacked?: boolean
 }) {
   const [fullName, setFullName] = useState('')
   const [phone, setPhone] = useState('')
@@ -53,7 +60,10 @@ export default function QuickForm({
       ) : (
         <>
           <p className="mb-4 text-center text-base font-bold text-navy sm:text-left">{heading}</p>
-          <form onSubmit={onSubmit} className="grid gap-3 md:grid-cols-[1fr_1fr_1.4fr_auto]">
+          <form
+            onSubmit={onSubmit}
+            className={`grid gap-3 ${stacked ? '' : 'md:grid-cols-[1fr_1fr_1.4fr_auto]'}`}
+          >
             <input
               className="field"
               placeholder="Họ tên"

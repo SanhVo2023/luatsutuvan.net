@@ -56,7 +56,7 @@ export function legalServiceLd() {
       '@type': 'PostalAddress',
       streetAddress: '108 Trần Đình Xu',
       addressLocality: 'Phường Cầu Ông Lãnh',
-      addressRegion: 'TP. Hồ Chí Minh',
+      addressRegion: 'Thành phố Hồ Chí Minh',
       addressCountry: 'VN',
     },
     openingHoursSpecification: {

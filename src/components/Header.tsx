@@ -38,10 +38,10 @@ export default function Header() {
           : 'border-b border-transparent bg-white/70 backdrop-blur-sm'
       }`}
     >
-      <div className="container-x flex h-[4.5rem] items-center justify-between gap-6">
+      <div className="container-x flex h-[4.5rem] items-center justify-between gap-3 sm:gap-6">
         {/* logo */}
         <Link href="/" className="group flex items-center gap-3" aria-label={SITE.name}>
-          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-trust text-white shadow-[var(--shadow-trust)] transition-transform duration-300 group-hover:-translate-y-0.5">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-trust text-white shadow-[var(--shadow-trust)] transition-transform duration-300 group-hover:-translate-y-0.5">
             <Scale className="h-5 w-5" strokeWidth={2.1} />
           </span>
           <span className="leading-tight">
@@ -92,19 +92,20 @@ export default function Header() {
           </a>
         </div>
 
-        {/* mobile toggles */}
-        <div className="flex items-center gap-2 lg:hidden">
+        {/* mobile toggles — shrink-0 + icon-only call pill below 420px so the
+            menu button never gets pushed past the viewport edge at 390px. */}
+        <div className="flex shrink-0 items-center gap-1.5 min-[420px]:gap-2 lg:hidden">
           <a
             href={`tel:${PHONE_TEL}`}
-            className="inline-flex h-11 items-center gap-2 rounded-full bg-trust px-4 text-sm font-bold text-white shadow-[var(--shadow-trust)]"
-            aria-label="Gọi ngay"
+            className="inline-flex h-11 w-11 items-center justify-center gap-2 rounded-full bg-trust text-sm font-bold text-white shadow-[var(--shadow-trust)] min-[420px]:w-auto min-[420px]:px-4"
+            aria-label={`Gọi ngay ${PHONE_DISPLAY}`}
           >
-            <Phone className="h-4.5 w-4.5" strokeWidth={2.4} />
-            Gọi
+            <Phone className="h-4.5 w-4.5 shrink-0" strokeWidth={2.4} />
+            <span className="hidden min-[420px]:inline">Gọi</span>
           </a>
           <button
             onClick={() => setOpen((v) => !v)}
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-[rgba(26,35,50,0.12)] text-navy transition-colors hover:bg-surface"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[rgba(26,35,50,0.12)] text-navy transition-colors hover:bg-surface"
             aria-label="Mở menu"
             aria-expanded={open}
           >

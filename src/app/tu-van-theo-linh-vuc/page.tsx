@@ -27,6 +27,7 @@ export default function PracticeDirectoryPage() {
       </section>
       <section className="container-x py-12 sm:py-16">
         <SectionHeading
+          as="h1"
           eyebrow="Lĩnh vực tư vấn"
           title="Luật sư chuyên môn cho từng lĩnh vực"
           lead="Mỗi vụ việc được luật sư đúng chuyên môn phụ trách. Chọn lĩnh vực để được tư vấn chính xác và nhanh nhất."

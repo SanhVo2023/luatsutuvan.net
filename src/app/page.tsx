@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Zap, ShieldCheck, Wallet, UserCheck, ArrowRight } from 'lucide-react'
@@ -13,9 +14,15 @@ import SectionHeading from '@/components/SectionHeading'
 import QuickForm from '@/components/forms/QuickForm'
 import ScrollReveal from '@/components/animations/ScrollReveal'
 import JsonLd from '@/components/JsonLd'
-import { faqLd, breadcrumbLd } from '@/lib/seo'
+import { faqLd, breadcrumbLd, absUrl } from '@/lib/seo'
 import { GENERAL_FAQS } from '@/content/faqs'
 import { IMAGES, SITE } from '@/config/site'
+
+// The homepage inherits title/description from the root layout but was the only
+// indexed route without a self-canonical — set it explicitly here.
+export const metadata: Metadata = {
+  alternates: { canonical: absUrl('/') },
+}
 
 const WHY = [
   { icon: Zap, title: 'Phản hồi tức thì', desc: 'Luật sư gọi lại trong 30 phút, không để bạn chờ đợi trong lo lắng.' },

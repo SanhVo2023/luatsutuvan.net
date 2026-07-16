@@ -17,7 +17,7 @@ export const metadata = pageMeta({
 })
 
 const MODES = [
-  { icon: MapPin, title: 'Tại văn phòng', desc: 'Gặp trực tiếp luật sư tại văn phòng Quận 1, TP.HCM.' },
+  { icon: MapPin, title: 'Tại văn phòng', desc: 'Gặp trực tiếp luật sư tại văn phòng 108 Trần Đình Xu, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh.' },
   { icon: Video, title: 'Trực tuyến', desc: 'Tư vấn qua video call hoặc Zalo, tiện lợi cho khách ở xa.' },
   { icon: Phone, title: 'Qua điện thoại', desc: 'Luật sư gọi đúng khung giờ bạn chọn, không cần chờ đợi.' },
 ]

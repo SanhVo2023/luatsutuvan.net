@@ -183,7 +183,6 @@ export default function ConsultForm({
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 autoComplete="name"
-                autoFocus
               />
             </div>
             <div>

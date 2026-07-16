@@ -26,10 +26,10 @@ export type Locale = 'vi' | 'en'
 export const APOLO = {
   vi: {
     legalName:
-      'Công ty Luật Apolo Lawyers, thuộc Đoàn Luật sư TP. Hồ Chí Minh, trực thuộc Liên đoàn Luật sư Việt Nam',
+      'Công ty Luật Apolo Lawyers, thuộc Đoàn Luật sư Thành phố Hồ Chí Minh, trực thuộc Liên đoàn Luật sư Việt Nam',
     shortName: 'Công ty Luật Apolo Lawyers',
-    address: '108 Trần Đình Xu, Phường Cầu Ông Lãnh, TP. Hồ Chí Minh',
-    phones: ['(028) 66.701.709', '0908.043.086'],
+    address: '108 Trần Đình Xu, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh',
+    phones: ['(028) 66.701.709', '0903.419.479'],
     callCenter: '0903.419.479',
     email: 'contact@apolo.com.vn',
     parentBrandUrl: 'https://www.apolo.com.vn',

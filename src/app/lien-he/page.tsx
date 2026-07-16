@@ -7,9 +7,9 @@ import { pageMeta, breadcrumbLd } from '@/lib/seo'
 import { SITE, PHONE_DISPLAY, PHONE_TEL, EMAIL, ZALO_URL, WHATSAPP_URL } from '@/config/site'
 
 export const metadata = pageMeta({
-  title: 'Liên Hệ Luật Sư Tư Vấn — Apolo Lawyers TP.HCM',
+  title: 'Liên Hệ Luật Sư Tư Vấn — Apolo Lawyers Thành phố Hồ Chí Minh',
   description:
-    'Liên hệ Apolo Lawyers qua điện thoại, Zalo, email hoặc đến văn phòng tại TP.HCM. Phản hồi trong 30 phút. Gọi 0903 419 479.',
+    'Liên hệ Apolo Lawyers qua điện thoại, Zalo, email hoặc đến văn phòng tại Thành phố Hồ Chí Minh. Phản hồi trong 30 phút. Gọi 0903 419 479.',
   path: '/lien-he',
 })
 
@@ -35,6 +35,7 @@ export default function LienHePage() {
 
       <section className="container-x py-10 sm:py-14">
         <SectionHeading
+          as="h1"
           eyebrow="Liên hệ"
           title="Nhiều cách để kết nối với luật sư"
           lead="Chọn kênh thuận tiện nhất — chúng tôi luôn có người sẵn sàng lắng nghe bạn."
@@ -97,7 +98,7 @@ export default function LienHePage() {
               <div className="mt-5 overflow-hidden rounded-xl border border-[rgba(26,35,50,0.08)]">
                 <iframe
                   title="Bản đồ văn phòng Apolo Lawyers"
-                  src="https://www.google.com/maps?q=108+Tr%E1%BA%A7n+%C4%90%C3%ACnh+Xu+TP.HCM&output=embed"
+                  src="https://www.google.com/maps?q=108+Tr%E1%BA%A7n+%C4%90%C3%ACnh+Xu+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh&output=embed"
                   width="100%"
                   height="240"
                   loading="lazy"

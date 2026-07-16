@@ -28,7 +28,7 @@ export const SITE = {
   legalName: vi.legalName,
   shortName: vi.shortName,
   address: vi.address,
-  branchAddress: 'Tầng 9, Tòa nhà K&M, 33 Ung Văn Khiêm, TP. Hồ Chí Minh',
+  branchAddress: 'Tầng 9, Tòa nhà K&M, 33 Ung Văn Khiêm, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh',
   phoneDisplay: PHONE_DISPLAY,
   phoneTel: PHONE_TEL,
   officePhones: vi.phones,

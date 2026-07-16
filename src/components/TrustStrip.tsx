@@ -15,7 +15,7 @@ const ITEMS = [
   { icon: Scale, value: '8 lĩnh vực', label: 'Tư vấn chuyên sâu' },
   { icon: Gift, value: 'Miễn phí', label: 'Tư vấn lần đầu' },
   { icon: ShieldCheck, value: 'Bảo mật', label: 'Theo Luật Luật sư' },
-  { icon: BadgeCheck, value: 'Đoàn LS TP.HCM', label: 'Thành viên', gold: true },
+  { icon: BadgeCheck, value: 'Đoàn Luật sư', label: 'Thành phố Hồ Chí Minh', gold: true },
 ]
 
 export default function TrustStrip() {
@@ -30,7 +30,11 @@ export default function TrustStrip() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ delay: i * 0.08, duration: 0.5 }}
-            className="flex flex-col items-center gap-1.5 bg-white px-4 py-6 text-center lg:py-7"
+            className={`flex flex-col items-center gap-1.5 bg-white px-4 py-6 text-center lg:py-7 ${
+              // 5 items in a 2-col mobile grid leave an empty gray cell — let the
+              // last tile span the full row on mobile instead.
+              i === ITEMS.length - 1 ? 'col-span-2 sm:col-span-1' : ''
+            }`}
           >
             <Icon
               className={`mb-1 h-6 w-6 ${it.gold ? 'text-gold' : 'text-trust'}`}

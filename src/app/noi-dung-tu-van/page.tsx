@@ -69,6 +69,7 @@ export default async function ContentListPage() {
 
       <section className="container-x py-10 sm:py-14">
         <SectionHeading
+          as="h1"
           eyebrow="Cẩm nang pháp lý"
           title="Hiểu rõ vấn đề trước khi hành động"
           lead="Những hướng dẫn thực tế, dễ hiểu về các tình huống pháp lý thường gặp — kèm lối tắt để hỏi luật sư ngay."
@@ -140,7 +141,7 @@ export default async function ContentListPage() {
           </div>
 
           <aside className="lg:sticky lg:top-28 lg:self-start">
-            <QuickForm heading="Có câu hỏi riêng? Hỏi luật sư ngay" />
+            <QuickForm stacked heading="Có câu hỏi riêng? Hỏi luật sư ngay" />
           </aside>
         </div>
       </section>

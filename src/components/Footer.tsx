@@ -28,7 +28,17 @@ export default function Footer({ nav }: { nav?: Navigation | null }) {
               Luật Sư <span className="text-trust">Tư Vấn</span>
             </span>
           </div>
-          <p className="mb-4 text-sm leading-relaxed">{SITE.legalName}</p>
+          {/* Company name links to the VN parent brand (VN content → apolo.com.vn rule). */}
+          <p className="mb-4 text-sm leading-relaxed">
+            <a
+              href={SITE.parentBrandUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+            >
+              {SITE.legalName}
+            </a>
+          </p>
           <a href={`tel:${PHONE_TEL}`} className="mb-2 flex items-center gap-2 text-xl font-extrabold text-trust">
             <Phone className="h-5 w-5" /> {PHONE_DISPLAY}
           </a>
